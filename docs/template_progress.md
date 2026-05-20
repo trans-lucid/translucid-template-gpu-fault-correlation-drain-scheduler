@@ -47,3 +47,12 @@ Acceptance:
 - unsolved candidate fails public tests for known expected reasons
 - Docker-backed public integration expected failure is validated locally and remotely
 - rendered candidate main contains no private material
+## Machine-Readable Contract Migration
+
+- machine_readable_manifest: present
+- root_make_aliases: present
+- render_context_support: present
+- check_render_contract: present
+- scan_safety_uses_manifest: present
+- remote_ci_manifest_validation: pending
+
