@@ -2,7 +2,7 @@
 
 ## 1. async-webhook-ledger
 
-Status: golden-template-candidate.
+Status: golden.
 
 Coverage:
 - backend reliability
