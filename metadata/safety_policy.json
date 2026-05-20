@@ -1,0 +1,28 @@
+{
+  "template_id": "gpu-fault-correlation-drain-scheduler",
+  "no_external_credentials": true,
+  "no_cloud_calls": true,
+  "no_real_gpus_required": true,
+  "no_startup_source_copying": true,
+  "no_real_customer_data": true,
+  "candidate_main_forbidden_paths": [
+    "solution",
+    "evaluator",
+    "tests_hidden",
+    "fixtures_hidden",
+    "SOLUTION.md",
+    "SOLUTION.md.j2",
+    "rubric.md",
+    "expected",
+    "source-dossiers",
+    "template.yaml"
+  ],
+  "required_scans": [
+    "candidate branch private material scan",
+    "secret pattern scan",
+    "customer source path scan"
+  ],
+  "allowed_services": [
+    "gpu-cluster-simulator"
+  ]
+}

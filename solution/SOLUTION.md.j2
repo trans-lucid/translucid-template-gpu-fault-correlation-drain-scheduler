@@ -1,0 +1,13 @@
+# Solution Notes
+
+The durable fix is to correlate symptoms across topology, NCCL logs, GPU metrics, IB counters, thermal readings, and Slurm jobs before scheduling drains.
+
+Key requirements:
+
+- Detect a leaf switch fault when multiple nodes under one switch have NCCL network symptoms and the switch has elevated IB counter deltas.
+- Avoid draining every node under a bad switch as if each node has an independent GPU failure.
+- Classify thermal cascades as cooling or rack-level faults, not GPU memory faults.
+- Reduce confidence and choose observation when required telemetry streams are missing.
+- Respect non-preemptable Slurm jobs for non-critical GPU warnings.
+- Generate stable `decision_key` values so repeated scheduler runs do not duplicate drain decisions.
+- Write operator-readable `results/fault_report.json` and `results/summary.md`.

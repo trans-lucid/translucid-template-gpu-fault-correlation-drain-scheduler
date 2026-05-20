@@ -1,0 +1,13 @@
+public:
+  seed: 20260520
+  traps:
+    - leaf switch degradation across two nodes
+    - corrected ECC warning on non-preemptable job
+    - duplicate symptoms for one target
+hidden:
+  seed: 20260521
+  traps:
+    - one dying GPU vs one bad leaf switch
+    - thermal cascade should not be memory failure
+    - missing telemetry reduces confidence
+    - repeated root causes must de-duplicate decisions

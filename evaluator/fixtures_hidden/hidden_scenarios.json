@@ -1,0 +1,9 @@
+{
+  "scenarios": [
+    "one dying GPU vs one bad leaf switch",
+    "thermal cascade is not memory failure",
+    "missing telemetry reduces confidence",
+    "non-preemptable Slurm job changes drain timing",
+    "repeated runs do not duplicate drain decisions"
+  ]
+}

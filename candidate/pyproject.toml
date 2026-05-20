@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-fault-correlation-candidate"
+version = "0.1.0"
+description = "Candidate starter for GPU fault correlation and drain scheduling."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.111",
+  "pytest>=8.2",
+  "requests>=2.32",
+  "uvicorn>=0.30"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "simulators*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests/public"]

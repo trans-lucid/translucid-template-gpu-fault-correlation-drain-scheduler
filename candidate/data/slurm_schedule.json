@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "job_id": "job-7711",
+      "name": "llama-pretrain-a",
+      "nodes": ["node-a1", "node-a2"],
+      "state": "RUNNING",
+      "preemptable": true,
+      "priority": "normal"
+    },
+    {
+      "job_id": "job-8822",
+      "name": "eval-nightly",
+      "nodes": ["node-b1"],
+      "state": "RUNNING",
+      "preemptable": false,
+      "priority": "high"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "template_id": "gpu-fault-correlation-drain-scheduler",
+  "positive_signals": [
+    "gpu",
+    "nccl",
+    "slurm",
+    "infiniband",
+    "dcgm",
+    "prometheus",
+    "telemetry",
+    "distributed training",
+    "allreduce",
+    "cluster scheduler",
+    "node drain",
+    "fabric",
+    "ib counters",
+    "thermal throttle",
+    "ecc errors"
+  ],
+  "negative_signals": [
+    "pure frontend only",
+    "no infra path",
+    "no telemetry or scheduler concepts"
+  ],
+  "stack_matches": [
+    "python",
+    "prometheus",
+    "slurm",
+    "kubernetes",
+    "ml infrastructure",
+    "observability"
+  ],
+  "best_roles": [
+    "ML Infra Engineer",
+    "Infrastructure Engineer",
+    "Staff Backend",
+    "Site Reliability Engineer"
+  ],
+  "personalization_knobs": [
+    "cluster size",
+    "accelerator family",
+    "scheduler vocabulary",
+    "telemetry stream names",
+    "drain policy",
+    "operator report style",
+    "failure mix"
+  ]
+}

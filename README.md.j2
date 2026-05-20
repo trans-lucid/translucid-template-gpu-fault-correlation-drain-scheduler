@@ -1,0 +1,55 @@
+# GPU Cluster Fault Correlation and Drain Scheduler
+
+You are on call for a synthetic GPU training cluster. A distributed training run is showing NCCL timeouts, degraded bandwidth, and node health alerts. The current fault pipeline over-drains nodes and misses cross-layer root causes.
+
+Your task is to repair the fault correlation and drain scheduler so the system can identify true root causes and produce safe operator-facing actions.
+
+## What You Are Building
+
+- telemetry ingestion
+- cross-layer fault correlation
+- root-cause classification
+- safe drain scheduling
+- on-call summary report
+
+## What Is Provided
+
+- synthetic GPU metrics inspired by DCGM-style telemetry
+- synthetic NCCL all-reduce logs
+- synthetic InfiniBand counter deltas
+- synthetic thermal readings
+- cluster topology and Slurm schedule fixtures
+- local Docker simulator exposing the telemetry through HTTP
+- public tests and expected output schema
+
+## Main Files To Edit
+
+- `src/telemetry_loader.py`
+- `src/topology.py`
+- `src/fault_engine.py`
+- `src/drain_scheduler.py`
+
+## Commands
+
+```bash
+make dev
+make seed
+make test
+make test-integration
+make run
+make clean
+```
+
+`make dev` starts the local simulator. `make seed` verifies the simulator is ready and clears previous drain decisions. `make run` writes `results/fault_report.json` and `results/summary.md`.
+
+## Deliverables
+
+- fixed fault correlation and drain scheduling implementation
+- `results/fault_report.json`
+- `results/summary.md`
+
+## Evaluation
+
+Public tests check the visible contract. Private tests use harder telemetry to check GPU-vs-switch disambiguation, thermal cascades, missing telemetry confidence, Slurm-aware timing, and idempotent drain decisions.
+
+No real GPUs, cloud credentials, Slurm cluster, NCCL install, or NVIDIA driver stack is required.

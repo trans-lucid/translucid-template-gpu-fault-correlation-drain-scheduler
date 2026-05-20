@@ -1,0 +1,68 @@
+id: gpu-fault-correlation-drain-scheduler
+title: GPU Cluster Fault Correlation and Drain Scheduler
+area: ml-infra
+language: python
+roles:
+  - ML Infra Engineer
+  - Infrastructure Engineer
+  - Staff Backend
+  - Site Reliability Engineer
+seniority:
+  - senior
+  - staff
+  - principal
+time_minutes:
+  medium: 75
+  hard: 105
+  staff: 120
+setup_time_minutes:
+  cached_images: 3
+  cold_pull: 6
+local_services:
+  - gpu-cluster-simulator
+local_environment:
+  required:
+    - docker
+    - docker-compose
+    - python-3.12
+  public_services:
+    - name: gpu-cluster-simulator
+      purpose: synthetic topology, Slurm jobs, GPU metrics, NCCL logs, IB counters, thermal readings, and drain decision endpoint
+  no_external_credentials: true
+  no_cloud_calls: true
+evaluation_axes:
+  - cross-layer fault correlation
+  - root-cause classification
+  - safe drain scheduling
+  - missing telemetry handling
+  - idempotent drain decisions
+  - operator-readable reporting
+source_signals:
+  - gpu
+  - nccl
+  - slurm
+  - infiniband
+  - dcgm
+  - telemetry
+  - drain
+  - scheduler
+  - distributed training
+  - allreduce
+candidate_expected_failure:
+  - leaf_switch_root_not_detected
+  - bad_leaf_switch_overdrain
+  - nonpreemptable_drain_violation
+  - duplicate_drain_decision
+hidden_test_strategy:
+  - one dying GPU vs one bad leaf switch
+  - thermal cascade is not memory failure
+  - missing telemetry reduces confidence
+  - non-preemptable Slurm job changes drain timing
+  - repeated runs do not duplicate drain decisions
+forbidden:
+  - copied-public-source
+  - real-gpu-required
+  - live-cloud-service
+  - parser-only
+  - one-file-helper
+  - hardcoded-fixture-answer

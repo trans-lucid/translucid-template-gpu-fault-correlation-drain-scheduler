@@ -1,0 +1,49 @@
+{
+  "cluster_id": "atlas-gpu-lab",
+  "racks": [
+    {
+      "rack_id": "rack-a",
+      "leaf_switches": [
+        {
+          "switch_id": "leaf-a",
+          "nodes": ["node-a1", "node-a2"]
+        }
+      ]
+    },
+    {
+      "rack_id": "rack-b",
+      "leaf_switches": [
+        {
+          "switch_id": "leaf-b",
+          "nodes": ["node-b1", "node-b2"]
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "node-a1",
+      "rack_id": "rack-a",
+      "leaf_switch": "leaf-a",
+      "gpus": ["gpu0", "gpu1", "gpu2", "gpu3", "gpu4", "gpu5", "gpu6", "gpu7"]
+    },
+    {
+      "node_id": "node-a2",
+      "rack_id": "rack-a",
+      "leaf_switch": "leaf-a",
+      "gpus": ["gpu0", "gpu1", "gpu2", "gpu3", "gpu4", "gpu5", "gpu6", "gpu7"]
+    },
+    {
+      "node_id": "node-b1",
+      "rack_id": "rack-b",
+      "leaf_switch": "leaf-b",
+      "gpus": ["gpu0", "gpu1", "gpu2", "gpu3", "gpu4", "gpu5", "gpu6", "gpu7"]
+    },
+    {
+      "node_id": "node-b2",
+      "rack_id": "rack-b",
+      "leaf_switch": "leaf-b",
+      "gpus": ["gpu0", "gpu1", "gpu2", "gpu3", "gpu4", "gpu5", "gpu6", "gpu7"]
+    }
+  ]
+}

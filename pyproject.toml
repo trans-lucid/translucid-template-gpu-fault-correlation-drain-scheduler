@@ -1,0 +1,9 @@
+[project]
+name = "translucid-template-gpu-fault-correlation-drain-scheduler"
+version = "0.1.0"
+description = "Internal Translucid template for GPU fault correlation and drain scheduling challenges."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["candidate/tests/public", "solution/tests", "evaluator/tests_hidden"]
+pythonpath = ["."]

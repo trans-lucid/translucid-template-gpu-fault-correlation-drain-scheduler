@@ -1,0 +1,17 @@
+{
+  "expected_starter_failures": [
+    "leaf_switch_root_not_detected",
+    "bad_leaf_switch_overdrain",
+    "nonpreemptable_drain_violation",
+    "duplicate_drain_decision"
+  ],
+  "public_expected_root_causes": [
+    "leaf_switch_degradation",
+    "gpu_ecc_warning"
+  ],
+  "result_schema": {
+    "required_top_level": ["root_causes", "drain_decisions", "summary"],
+    "root_cause_required_fields": ["root_cause_type", "scope", "target", "confidence", "evidence"],
+    "drain_required_fields": ["decision_key", "action", "target_type", "target", "timing", "reason"]
+  }
+}

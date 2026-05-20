@@ -1,0 +1,4 @@
+{"ts":"2026-05-20T01:00:30Z","node_id":"node-a1","rack_id":"rack-a","inlet_temp_c":24,"exhaust_temp_c":39,"thermal_throttle":false}
+{"ts":"2026-05-20T01:00:30Z","node_id":"node-a2","rack_id":"rack-a","inlet_temp_c":25,"exhaust_temp_c":40,"thermal_throttle":false}
+{"ts":"2026-05-20T01:00:30Z","node_id":"node-b1","rack_id":"rack-b","inlet_temp_c":27,"exhaust_temp_c":42,"thermal_throttle":false}
+{"ts":"2026-05-20T01:00:30Z","node_id":"node-b2","rack_id":"rack-b","inlet_temp_c":27,"exhaust_temp_c":41,"thermal_throttle":false}

@@ -1,0 +1,2 @@
+{"ts":"2026-05-20T01:01:00Z","switch_id":"leaf-a","port":"mlx5_0","symbol_error_delta":1840,"link_down_delta":2,"port_rcv_errors_delta":93,"nodes":["node-a1","node-a2"]}
+{"ts":"2026-05-20T01:01:00Z","switch_id":"leaf-b","port":"mlx5_0","symbol_error_delta":4,"link_down_delta":0,"port_rcv_errors_delta":1,"nodes":["node-b1","node-b2"]}

@@ -1,0 +1,4 @@
+{"ts":"2026-05-20T01:02:10Z","job_id":"job-7711","node_id":"node-a1","rank":3,"op":"all_reduce_perf","level":"WARN","message":"NCCL WARN NET/IB timeout waiting for completion on mlx5_0","busbw_gbps":42.1}
+{"ts":"2026-05-20T01:02:12Z","job_id":"job-7711","node_id":"node-a2","rank":11,"op":"all_reduce_perf","level":"WARN","message":"NCCL WARN NET/IB retry exceeded on mlx5_0","busbw_gbps":39.8}
+{"ts":"2026-05-20T01:02:18Z","job_id":"job-7711","node_id":"node-a1","rank":5,"op":"all_reduce_perf","level":"INFO","message":"all_reduce_perf busbw below expected p50","busbw_gbps":44.0}
+{"ts":"2026-05-20T01:03:01Z","job_id":"job-8822","node_id":"node-b1","rank":0,"op":"all_reduce_perf","level":"INFO","message":"all_reduce_perf completed with low variance","busbw_gbps":186.4}

@@ -1,0 +1,7 @@
+{
+  "root_cause_types": [
+    "gpu_ecc_warning",
+    "leaf_switch_degradation"
+  ],
+  "drain_decision_count": 2
+}
