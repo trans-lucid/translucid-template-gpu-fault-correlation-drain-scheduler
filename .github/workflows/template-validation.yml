@@ -43,6 +43,9 @@ jobs:
       - name: Rendered repo smoke test
         run: make PYTHON=python validate-rendered-smoke
 
+      - name: Validate personalization
+        run: make PYTHON=python validate-personalization
+
       - name: Docker-backed integration expected failure
         run: make PYTHON=python validate-docker-integration
 
