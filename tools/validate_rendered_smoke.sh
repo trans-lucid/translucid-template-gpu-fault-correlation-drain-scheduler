@@ -3,6 +3,11 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
+cleanup_transients() {
+  find "$ROOT/generated" -type d \( -name "__pycache__" -o -name ".pytest_cache" -o -name "*.egg-info" \) -prune -exec rm -rf {} + 2>/dev/null || true
+  find "$ROOT/generated" -type f -name "*.pyc" -delete 2>/dev/null || true
+}
+
 if [ ! -d "$ROOT/generated/main" ] || [ ! -d "$ROOT/generated/solution" ]; then
   echo "rendered repos missing; run make render first"
   exit 1
@@ -27,4 +32,5 @@ cd "$ROOT/generated/solution"
 python3 -m pip install -e . >/tmp/gpu-render-solution-install.txt
 CLUSTER_DATA_DIR="$PWD/data" EVAL_TARGET="$PWD/solution" python3 -m pytest tests/public/test_public.py evaluator/tests_hidden
 
+cleanup_transients
 echo "rendered repo smoke test passed"

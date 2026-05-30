@@ -181,8 +181,6 @@ def apply_template_context(rendered_root: Path) -> None:
 
 def write_solution_personalization(solution_root: Path) -> None:
     context = load_template_context()
-    if not context:
-        return
     manifest = load_manifest()
     profile = profile_payload(context, include_private=True)
     expected = manifest.get("expected_failure_markers", [])

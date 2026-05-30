@@ -2,5 +2,5 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-cd "$ROOT/candidate"
+cd "$ROOT"
 python3 -m pytest tests/public
