@@ -3,10 +3,11 @@ from __future__ import annotations
 import requests
 
 from src.drain_scheduler import run_pipeline
+from src.telemetry_loader import reset_simulator
 
 
 def test_docker_simulator_path_exercises_http_telemetry_and_drain_endpoint():
-    requests.delete("http://localhost:8090/drain-decisions", timeout=5).raise_for_status()
+    reset_simulator()
     report = run_pipeline(source="service", out="results/fault_report.json")
 
     root_types = set(report["summary"]["root_cause_types"])

@@ -14,6 +14,7 @@ Your task is to repair the fault correlation and drain scheduler so the system c
 ## Commands
 
 ```bash
+make setup
 make dev
 make seed
 make test
@@ -23,5 +24,3 @@ make clean
 ```
 
 `make dev` starts the local simulator. `make seed` verifies simulator readiness and clears prior drain decisions. `make run` writes `results/fault_report.json` and `results/summary.md`.
-
-Expected coding time: 75-120 minutes. Cached setup should take under 5 minutes; cold Docker pulls can add several minutes.

@@ -32,6 +32,7 @@ Your task is to repair the fault correlation and drain scheduler so the system c
 ## Commands
 
 ```bash
+make setup
 make dev
 make seed
 make test
@@ -50,6 +51,6 @@ make clean
 
 ## Evaluation
 
-Public tests check the visible contract. Private tests use harder telemetry to check GPU-vs-switch disambiguation, thermal cascades, missing telemetry confidence, Slurm-aware timing, and idempotent drain decisions.
+Public tests check the visible contract. Additional evaluation checks may use harder telemetry to check GPU-vs-switch disambiguation, thermal cascades, missing telemetry confidence, Slurm-aware timing, and idempotent drain decisions.
 
 No real GPUs, cloud credentials, Slurm cluster, NCCL install, or NVIDIA driver stack is required.
