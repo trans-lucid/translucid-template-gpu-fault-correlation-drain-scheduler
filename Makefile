@@ -4,7 +4,7 @@ PYTHON ?= python3
 
 install:
 	$(PYTHON) -m pip install --upgrade pip
-	$(PYTHON) -m pip install -e candidate
+	$(PYTHON) -m pip install -e 'candidate[test]'
 
 validate-solution: install
 	CLUSTER_DATA_DIR="$(CURDIR)/candidate/data" EVAL_TARGET="$(CURDIR)/solution" $(PYTHON) -m pytest candidate/tests/public/test_public.py solution/tests evaluator/tests_hidden
